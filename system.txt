@@ -1,0 +1,30 @@
+Software Modules:
+
+MONMOD.ASM	Contains routines appended to monitor
+	SERINIT()
+	DOWNLOAD()
+	A=ISCHAR()
+	A=GETCHAR()
+	SNDCHAR(A)	
+
+SYSTEM.ASM	Contains the ISR and common utilities.
+	INTERRUPT_SERVICE_ROUTINE
+	A=GET_SWITCHES()
+	SET_LAMP(A)
+	A=GET_LAMP()
+	PRINT_MESSAGE(R0,R1)	; MSB,LSB
+	PRINT_HEXBYTE(A)
+	SET_AYREG(R0,A)		; R0=register, A=value
+	A=GET_AYREG(R0)		; R0=register
+
+MOTORDRV.ASM	Contains the motor control routines
+	A=MOTOR_STATUS()	; SDE--SDE Left,Right
+	MOTOR_LEFT(-----SDE)
+	MOTOR_RIGHT(-----SDE)
+	MOTOR(SDE--SDE)		; SDE--SDE Left,Right
+
+MUSIC.ASM	Contains the routines for music generation
+
+SENSOR.ASM	Contains the routines for sensor control
+
+CAROLBOT.ASM	Contains the master control program for the robot
